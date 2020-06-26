@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,13 +19,25 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
+class MyHomePage extends StatelessWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter App'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Card(
+            child: Text('CHART!'),
+          ),
+          Card(
+            child: Text('LIST OF TX!'),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class _MyHomePageState extends State<MyHomePage> {
