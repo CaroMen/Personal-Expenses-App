@@ -1,3 +1,5 @@
+// import './widgets/user_transactions.dart';
+
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import 'package:flutter/material.dart';
@@ -50,9 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
       id: DateTime.now().toString(),
     );
 
-    setState(() {
-      _userTransactions.add(newTx);
-    });
+    setState(
+      () {
+        _userTransactions.add(newTx);
+      },
+    );
   }
 
   void _startAddNewTransaction(BuildContext ctx) {
